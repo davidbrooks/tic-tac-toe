@@ -1,1 +1,39 @@
-@import 'reset.scss'
+@import 'reset.scss';
+@import 'utility.scss';
+
+body {
+	background: #fff;
+	font-family: "helvetica neue", helvetica, arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 10px;
+}
+
+.wrapper {
+	height: 620px;
+	margin: 40px auto 0;
+	width: 620px;
+	h1 {
+		font-size: 32px;
+		text-align: center;
+	}
+	.board {
+		.space {
+			border: 1px solid #000;
+			box-sizing: border-box;
+			display: block;
+			float: left;
+			height: 100px;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			width: 100px;
+		}
+	}
+}

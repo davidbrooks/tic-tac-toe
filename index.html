@@ -7,12 +7,22 @@
 	<meta name="keywords" content="" />
 	<title>Tic Tac Toe</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="_css/screen.css"/>
+	<link rel="stylesheet" href="_css/master.css"/>
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="_js/handlebars.js"></script>
 	<script src="_js/interaction.js"></script>
 </head>
 <body>
-	
+	<div class="wrapper">
+		<h1>Tic Tac Toe</h1>
+		<div class="sidebar">
+		</div> <!-- /.sidebar -->
+		<div id="board" class="board"></div> <!-- /.board -->
+	</div>
+	<div id="templates" class="hide">
+		<script id="_space_template" type="text/x-handlebars-template">
+			<a href="#" class="space {{ class }}" id="space_{{id}}" data-owned="" style="width: {{ dimension }}; height: {{ dimension }}"></a>
+		</script>
+	</div><!-- /#templates -->
 </body>
 </html>
