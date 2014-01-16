@@ -2,6 +2,7 @@ var t = (function($, window, document, undefined) {
 	$('document').ready(function(){
 		t.init();
 	});
+	var history = 0;
 	var spaces = 3;
 	return {
 		init: function(){

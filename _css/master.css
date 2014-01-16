@@ -198,6 +198,7 @@ svg {
 
 body {
   background: #fff;
+  color: "#333";
   font-family: "helvetica neue", helvetica, arial, sans-serif;
   font-size: 14px;
   line-height: 1.5; }
@@ -205,23 +206,37 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+p,
+ul {
   margin: 10px; }
 
+h1 {
+  font-size: 32px;
+  text-align: center; }
+
 .wrapper {
-  height: 620px;
+  height: 520px;
   margin: 40px auto 0;
-  width: 620px; }
-  .wrapper h1 {
-    font-size: 32px;
+  width: 520px; }
+  .wrapper .players ul {
     text-align: center; }
-  .wrapper .board .space {
-    border: 1px solid #000;
-    box-sizing: border-box;
-    display: block;
-    float: left;
-    height: 100px;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: 100px; }
+    .wrapper .players ul li {
+      display: inline-block;
+      font-size: 18px;
+      margin: 10px; }
+    .wrapper .players ul li.active {
+      color: #FF8000; }
+  .wrapper .board_wrapper {
+    height: 520px;
+    width: 520px; }
+    .wrapper .board_wrapper .board .space {
+      border: 1px solid #000;
+      box-sizing: border-box;
+      display: block;
+      float: left;
+      height: 100px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: 100px; }

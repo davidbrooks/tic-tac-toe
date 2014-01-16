@@ -15,9 +15,16 @@
 <body>
 	<div class="wrapper">
 		<h1>Tic Tac Toe</h1>
-		<div class="sidebar">
+		<div class="players">
+			<ul>
+				<li class="active">Player 1: X</li>
+				<li>Player 2: O</li>
+			</ul>
 		</div> <!-- /.sidebar -->
-		<div id="board" class="board"></div> <!-- /.board -->
+		<div id="board_wrapper" class="board_wrapper">
+			<div id="board" class="board"></div> <!-- /.board -->
+		</div> <!-- ./board_wrapper -->
+		<div class="clear"></div>
 	</div>
 	<div id="templates" class="hide">
 		<script id="_space_template" type="text/x-handlebars-template">
