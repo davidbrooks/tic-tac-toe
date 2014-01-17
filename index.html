@@ -16,9 +16,9 @@
 	<div class="wrapper">
 		<h1>Tic Tac Toe</h1>
 		<div class="players">
-			<ul>
-				<li class="active">Player 1: X</li>
-				<li>Player 2: O</li>
+			<ul id="players">
+				<li class="active" data-player="1">Player 1: X</li>
+				<li data-player="2">Player 2: O</li>
 			</ul>
 		</div> <!-- /.sidebar -->
 		<div id="board_wrapper" class="board_wrapper">
@@ -27,6 +27,9 @@
 		<div class="clear"></div>
 	</div>
 	<div id="templates" class="hide">
+		<script id="_mark_template" type="text/x-handlebars-template">
+			<img src="/_imgs/{{ img }}.svg" alt="{{ img }}" />
+		</script>
 		<script id="_space_template" type="text/x-handlebars-template">
 			<a href="#" class="space {{ class }}" id="space_{{id}}" data-owned="" style="width: {{ dimension }}; height: {{ dimension }}"></a>
 		</script>

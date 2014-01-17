@@ -233,10 +233,17 @@ h1 {
     .wrapper .board_wrapper .board .space {
       border: 1px solid #000;
       box-sizing: border-box;
+      color: #000;
       display: block;
       float: left;
       height: 100px;
       margin: 0;
-      padding: 0;
+      overflow: hidden;
       position: relative;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
       width: 100px; }
+      .wrapper .board_wrapper .board .space img {
+        height: 100%;
+        width: 100%; }
