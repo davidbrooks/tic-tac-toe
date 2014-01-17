@@ -73,10 +73,12 @@ var t = (function($, window, document, undefined) {
 		setup_board: function(){
 			// First, clear the board
 			$('.board').html();
+			// Find the board width
+			var board_width = $('#board').width();
 			// Now, recreate it with the right number of spaces
 			// I'm assuming here that the board should always be a square, not just any rectangle
 			// Figure out how wide and tall each space should be
-			var dimension = 100 / spaces;
+			var dimension = board_width / spaces - (spaces * 2);
 			for (var s = 0; s < spaces * spaces; s++) {
 				var css_class = '';
 				// See if this is the first square in a line.
@@ -85,14 +87,13 @@ var t = (function($, window, document, undefined) {
 					css_class = "clear";
 				}
 				// Create the context
-				var context = { "id": s, "class" : css_class, "dimension" : dimension + '%' };
+				var context = { "id": s, "class" : css_class, "dimension" : dimension + 'px' };
 				// Now, add this square into the board
 				t.append_template('#_space_template', '#board', context);
 			}
 			// Make sure there's a clear div at the end
 			$('#board').append('<div class="clear"></div>');
-			// Once we're done, find the board width
-			var board_width = $('#board').width();
+			
 			// Make the board square again
 			$('#board').height(board_width);
 		}
