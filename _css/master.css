@@ -196,6 +196,18 @@ svg {
 .clear {
   clear: both; }
 
+.icon {
+  display: inline-block;
+  height: 20px;
+  margin-right: 5px;
+  width: 20px; }
+  .icon img {
+    height: 100%;
+    width: 100%; }
+
+.margin_right_none {
+  margin-right: 0; }
+
 body {
   background: #fff;
   color: "#333";
@@ -209,11 +221,18 @@ h3,
 h4,
 p,
 ul {
+  font-weight: normal;
   margin: 10px; }
 
 h1 {
   font-size: 32px;
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
+
+a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none; }
 
 .wrapper {
   height: 520px;
@@ -250,3 +269,21 @@ h1 {
       .wrapper .board_wrapper .board .space img {
         height: 100%;
         width: 100%; }
+  .wrapper .undo {
+    color: "#333";
+    margin-top: 15px;
+    position: absolute; }
+    .wrapper .undo span.text {
+      display: block;
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap; }
+  .wrapper .squares {
+    margin-left: 450px;
+    position: absolute; }
+    .wrapper .squares #number_of_squares {
+      text-align: right;
+      width: 32px; }
+
+label {
+  display: none; }

@@ -2,6 +2,7 @@
 @import 'utility.scss';
 
 $gray: '#333';
+$orange: #FF8000;
 
 body {
 	background: #fff;
@@ -17,12 +18,20 @@ h3,
 h4,
 p,
 ul {
+	font-weight: normal;
 	margin: 10px;
 }
 
 h1 {
 	font-size: 32px;
 	text-align: center;
+	text-transform: uppercase;
+}
+
+a {
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 .wrapper {
@@ -70,4 +79,27 @@ h1 {
 			}
 		}
 	}
+	.undo {
+		color: $gray;
+		margin-top: 15px;
+		position: absolute;
+		span.text {
+			display: block;
+			overflow: hidden;
+			text-indent: 100%;
+			white-space: nowrap;
+		}
+	}
+	.squares {
+		margin-left: 450px;
+		position: absolute;
+		#number_of_squares {
+			text-align: right;
+			width: 32px;
+		}
+	}
+}
+
+label {
+	display: none;
 }

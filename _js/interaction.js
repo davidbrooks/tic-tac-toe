@@ -8,8 +8,19 @@ var t = (function($, window, document, undefined) {
 	return {
 		init: function(){
 			// This is an initial set of things to fire when the page loads
+			t.blurs();
 			t.clicks();
 			t.setup_board();
+		},
+		blurs: function(){
+			$('body').on('keyup', '#number_of_squares', function(){
+				var number_of_squares = parseInt($(this).val());
+				if (!isNaN(number_of_squares)) {
+					spaces = number_of_squares;
+					t.setup_board();
+					$('#matching_number').text(spaces);
+				}
+			});
 		},
 		clicks: function(){
 			$('body').on('click', '.space', function(){
@@ -72,7 +83,7 @@ var t = (function($, window, document, undefined) {
 		},
 		setup_board: function(){
 			// First, clear the board
-			$('.board').html();
+			$('.board').html('');
 			// Now, recreate it with the right number of spaces
 			// I'm assuming here that the board should always be a square, not just any rectangle
 			// Figure out how wide and tall each space should be

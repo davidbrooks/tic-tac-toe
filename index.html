@@ -15,7 +15,21 @@
 <body>
 	<div class="wrapper">
 		<h1>Tic Tac Toe</h1>
+		<div class="squares">
+			<form method="post" action="#">
+				<p class="margin_right_none">
+					<label for="number_of_squares">Number of Columns</label>
+					<input type="text" id="number_of_squares" name="number_of_squares" placeholder="3" value="" /> x <span id="matching_number">3</span>
+				</p>
+			</form>
+		</div> <!--/.squares -->
 		<div class="players">
+			<a href="#" id="undo" class="undo">
+				<span class="icon">
+					<img src="/_imgs/undo.svg" />
+				</span>
+				<span class="text">Undo</span>
+			</a>
 			<ul id="players">
 				<li class="active" data-player="1">Player A: X</li>
 				<li data-player="2">Player B: O</li>
@@ -25,9 +39,6 @@
 			<div id="board" class="board"></div> <!-- /.board -->
 		</div> <!-- ./board_wrapper -->
 		<div class="clear"></div>
-		<div class="footer">
-			<a href="#" id="undo">Undo</a>
-		</div> <!-- /.footer -->
 	</div>
 	<div id="templates" class="hide">
 		<script id="_mark_template" type="text/x-handlebars-template">
