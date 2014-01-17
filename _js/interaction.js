@@ -3,7 +3,7 @@ var t = (function($, window, document, undefined) {
 		t.init();
 	});
 	// Here are some standard values
-	var history = 0;
+	var history = [];
 	var spaces = 3;
 	return {
 		init: function(){
@@ -30,7 +30,23 @@ var t = (function($, window, document, undefined) {
 					var img = { "img" : image};
 					// Load it into the space
 					t.load_template('#_mark_template', this_space, img);
+					// Add this move to the history
+					history.push(this_space);
 					// Change players up
+					t.change_players();
+				}
+				return false;
+			});
+			$('body').on('click', '#undo', function(){
+				// First, see if there's history
+				if (history.length) {
+					// What was the last move
+					var last_move = history[history.length - 1];
+					// Undo it
+					$(last_move).html('');
+					// Remove it from history
+					history.pop();
+					// Change players again
 					t.change_players();
 				}
 				return false;
